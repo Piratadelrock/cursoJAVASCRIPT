@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+
+    <script src="jquery-3.6.0.js"></script>
+    <!-- otra forma es usando el cdn jquery la minify(minificada) -->
+    <script 
+        src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <Style>
+        /* id */
+        #textohover{
+            display:none;
+        }
+        #slide{
+            cursor: pointer;
+        }
+        #txtslide{
+            display:none;
+            background-color:blue;
+            
+        }
+        /* clase */
+        .borde{
+            border: 1px dashed blue;
+        }
+    </Style>
+</head>
+<body>
+    <!-- los estilos inline son menos fuertes que los creados en archivos
+     style="border: 31px solid red" -->
+    <span>Texto del span</span>
+    <a href="https://www.google.com/" title="google">google</a>
+
+    <script src="28etiquetas-atributos.js"></script>
+    
+    <h1>29.1 EVENTO CLICK</h1>
+    <button id="btnmostrar">Boton mostrar</button>
+    <button id="btnocultar">Boton ocultar</button>
+    <p id="texto"></p>
+    
+    <h1>29.2 EVENTO HOVER</h1>
+    <button id="btnhover"></button>
+    <P id="textohover">soy un parrafo</P>
+
+    <h1>29.3 ADDCLASS Y REMOVE CLASS </h1>
+    <p class="parrafo">parrafo 1</p>
+    <p class="parrafo">parrafo 2</p>
+
+    <h1>29.4 EFECTO SLIDE </h1>
+    <h2 id="slide">PULSAR</h2>
+    <P id="txtslide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea architecto blanditiis nostrum facilis. Ullam, placeat, deleniti voluptatibus facere veniam suscipit at eveniet praesentium recusandae ducimus autem, pariatur omnis reiciendis ipsum.</P>
+
+    <script src="29event.js"></script>
+
+
+    <!-- ejemplos de script -->
+    <script>
+        // cuando el documento este cargado, o listo realiza la funcion (la accion)
+        $(document).ready(function(){
+           console.log('Jquery funciona');
+        })
+
+
+        // ejemplos en js
+        var nombre = document.getElementById('span');
+        // ejemplo en jquery
+        var nombre = $('#span');
+    </script>
+</body>
+</html>
